@@ -3876,6 +3876,25 @@ input[type="button"].btn--primary:focus {
 
 
 /* ===================================================================
+ * # alerte 
+ * ------------------------------------------------------------------- */
+ .alert{
+    background-color: var(--color-1);
+ }
+
+ .alert h3{
+    margin-top: var(--vspace-1);
+}
+.centered-column {
+    display: flex;
+    align-items: center;
+}
+.icon-exclamation {
+    font-size: 3em;
+    color: black;
+}
+
+/* ===================================================================
  * # experience 
  * ------------------------------------------------------------------- */
 
