@@ -3900,7 +3900,7 @@ input[type="button"].btn--primary:focus {
 
  .s-resume {
     background-color: white;
-    padding-bottom: var(--vspace-4);
+    /*padding-bottom: var(--vspace-4);*/
 }
 
 .s-resume__section {
@@ -3911,7 +3911,7 @@ input[type="button"].btn--primary:focus {
 
 .s-resume__section:last-child {
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: var(--vspace-2);
     margin-bottom: 0;
 }
 
