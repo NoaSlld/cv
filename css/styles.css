@@ -1658,9 +1658,13 @@ h1, .h1 {
 }
 
 h2, .h2 {
+    /*
     font-size: var(--text-xxl);
     line-height: calc(var(--vspace-1_25) + var(--vspace-0_125));
     letter-spacing: -.01em;
+    */
+    font-size: var(--text-xl);
+    line-height: var(--vspace-1_25);
 }
 
 h3, .h3 {
@@ -3500,6 +3504,28 @@ input[type="button"].btn--primary:focus {
     margin-top: 0;
     margin-bottom: 0;
 }
+/*
+.s-hero__content h2 n existait pas, rendre h2 comme h3 pour reférencement
+*/
+.s-hero__content h2 {
+    font-family: var(--font-2);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.667;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: var(--vspace-0_5);
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: var(--vspace-1);
+    max-width: 800px;
+    position: relative;
+}
+/*
+.s-hero__content h2 span, .s-hero__content h2 a     n existait pas, rendre h2 comme h3 pour reférencement
+*/
+.s-hero__content h2 span, .s-hero__content h2 a {
+    color: white;
+}
 
 .s-hero__content h3 {
     font-family: var(--font-2);
@@ -3773,7 +3799,7 @@ input[type="button"].btn--primary:focus {
 .s-about {
     --color-border: var(--color-gray-16);
     background-color: var(--color-gray-17);
-    padding-top: calc(6 * var(--space));
+    padding-top: calc(5 * var(--space));
     padding-bottom: var(--vspace-4);
     color: rgba(255, 255, 255, 0.4);
 }
@@ -3905,20 +3931,34 @@ input[type="button"].btn--primary:focus {
 
 .s-resume__section {
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: var(--vspace-0_75);
-    padding-top: calc(6 * var(--space));
+    padding-bottom: calc(2* var(--space));
+    padding-top: calc(3.5* var(--space));
+    
 }
 
+/*
 .s-resume__section:last-child {
     border-bottom: none;
     padding-bottom: var(--vspace-2);
     margin-bottom: 0;
 }
+*/
 
 /* ------------------------------------------------------------------- 
  * ## experience block
  * ------------------------------------------------------------------- */
-.resume-block {
+ #cv{
+    background-color: white;
+    padding-top: calc(1.5 * var(--space));
+}
+
+/* ne fonctionne pas
+#cv #connaissances .resume-block{
+    border-bottom: none;
+}
+*/
+
+ .resume-block {
     margin-bottom: var(--vspace-1_75);
 }
 
@@ -3958,14 +3998,41 @@ input[type="button"].btn--primary:focus {
     margin-right: .2rem;
 }
 
+/*pour cacher le contenu avec le js*/
+#additionalText1{
+    display:none;
+}
+
+#additionalText2{
+    display: none;
+}
+
+#toggleButton1, #toggleButton2 {
+    --btn-height: inherit;
+    letter-spacing:inherit;
+}
+
+.additionalImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.additionalImages img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * resume
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
-    .s-resume {
+    /*.s-resume {
         padding-top: var(--vspace-4);
-    }
+    }*/
     .s-resume__section .column:first-child {
         text-align: center;
     }
@@ -4274,7 +4341,7 @@ input[type="button"].btn--primary:focus {
     width: 100%;
     height: 100%;
     background-color: var(--color-gray-19);
-    opacity: .8;
+    opacity: .7;
 }
 
 .s-testimonials h3 {
@@ -4379,7 +4446,7 @@ input[type="button"].btn--primary:focus {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * testimonials
+ * avis
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
     .testimonial-slider__slide {
@@ -4415,7 +4482,7 @@ input[type="button"].btn--primary:focus {
 .s-contact {
     background-color: var(--color-gray-18);
     padding-top: calc(6 * var(--space));
-    padding-bottom: var(--vspace-3_5);
+    padding-bottom: var(--vspace-5);
 }
 
 .s-contact .section-header-allcaps {
@@ -4541,7 +4608,6 @@ input[type="button"].btn--primary:focus {
 
 .s-footer .row {
     padding-top: var(--vspace-1);
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .s-footer a {

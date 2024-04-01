@@ -295,7 +295,35 @@
 
     }; // end ssBackToTop
 
-
+    /* diplay experience's details
+    * ------------------------------------------------------ */
+    document.addEventListener("DOMContentLoaded", function() {
+        var button1 = document.getElementById("toggleButton1");
+        var additionalText1 = document.getElementById("additionalText1");
+    
+        button1.addEventListener("click", function() {
+            if (additionalText1.style.display === "none") {
+                additionalText1.style.display = "block";
+                button1.textContent = "Masquer les détails supplémentaires";
+            } else {
+                additionalText1.style.display = "none";
+                button1.textContent = "En savoir plus sur mon stage";
+            }
+        });
+        
+        var button2 = document.getElementById("toggleButton2");
+        var additionalText2 = document.getElementById("additionalText2");
+    
+        button2.addEventListener("click", function() {
+            if (additionalText2.style.display === "none") {
+                additionalText2.style.display = "block";
+                button2.textContent = "Masquer les détails supplémentaires";
+            } else {
+                additionalText2.style.display = "none";
+                button2.textContent = "En savoir plus sur ce projet";
+            }
+        });
+    });    
 
    /* initialize
     * ------------------------------------------------------ */
