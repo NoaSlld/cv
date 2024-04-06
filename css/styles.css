@@ -321,19 +321,6 @@ h1 {
  * ## grouping
  * ------------------------------------------------------------------- */
 
-/* 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE. */
-
-hr {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    /* 1 */
-    height: 0;
-    /* 1 */
-    overflow: visible;
-    /* 2 */
-}
-
 /* 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers. */
 
@@ -354,19 +341,6 @@ a {
     background-color: transparent;
 }
 
-/* 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
-
-abbr[title] {
-    border-bottom: none;
-    /* 1 */
-    text-decoration: underline;
-    /* 2 */
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
-    /* 2 */
-}
-
 /* Add the correct font weight in Chrome, Edge, and Safari. */
 
 b, strong {
@@ -381,30 +355,6 @@ code, kbd, samp {
     /* 1 */
     font-size: 1em;
     /* 2 */
-}
-
-/* Add the correct font size in all browsers. */
-
-small {
-    font-size: 80%;
-}
-
-/* Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers. */
-
-sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-sup {
-    top: -0.5em;
 }
 
 /* ------------------------------------------------------------------- 
@@ -470,33 +420,6 @@ button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focus
     outline: 1px dotted ButtonText;
 }
 
-/* Correct the padding in Firefox. */
-
-fieldset {
-    padding: 0.35em 0.75em 0.625em;
-}
-
-/* 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers. */
-
-legend {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    /* 1 */
-    color: inherit;
-    /* 2 */
-    display: table;
-    /* 1 */
-    max-width: 100%;
-    /* 1 */
-    padding: 0;
-    /* 3 */
-    white-space: normal;
-    /* 1 */
-}
-
 /* Add the correct vertical alignment in Chrome, Firefox, and Opera. */
 
 progress {
@@ -509,39 +432,6 @@ textarea {
     overflow: auto;
 }
 
-/* 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10. */
-
-[type="checkbox"], [type="radio"] {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */
-}
-
-/* Correct the cursor style of increment and decrement buttons in Chrome. */
-
-[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-/* 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari. */
-
-[type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */
-}
-
-/* Remove the inner padding in Chrome and Safari on macOS. */
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
 /* 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari. */
 
@@ -550,38 +440,6 @@ textarea {
     /* 1 */
     font: inherit;
     /* 2 */
-}
-
-/* ------------------------------------------------------------------- 
- * ## interactive
- * ------------------------------------------------------------------- */
-
-/* Add the correct display in Edge, IE 10+, and Firefox. */
-
-details {
-    display: block;
-}
-
-/* Add the correct display in all browsers. */
-
-summary {
-    display: list-item;
-}
-
-/* ------------------------------------------------------------------- 
- * ## misc
- * ------------------------------------------------------------------- */
-
-/* Add the correct display in IE 10+. */
-
-template {
-    display: none;
-}
-
-/* Add the correct display in IE 10. */
-
-[hidden] {
-    display: none;
 }
 
 
@@ -642,11 +500,6 @@ strong, b {
     line-height: inherit;
 }
 
-small {
-    font-size: 60%;
-    line-height: inherit;
-}
-
 ol, ul {
     list-style: none;
 }
@@ -670,10 +523,6 @@ a img {
 /* ------------------------------------------------------------------- 
  * ## inputs
  * ------------------------------------------------------------------- */
-fieldset {
-    margin: 0;
-    padding: 0;
-}
 
 input[type="email"], 
 input[type="number"], 
@@ -729,20 +578,11 @@ input[type="password"], textarea {
     padding: 0 var(--gutter-lg);
 }
 
-.collapse>.column, .column.collapse {
-    padding: 0;
-}
-
 /* flex row containers utility classes
  */
 .row.row-wrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-}
-
-.row.row-nowrap {
-    -ms-flex-wrap: none;
-    flex-wrap: nowrap;
 }
 
 .row.row-y-top {
@@ -757,24 +597,6 @@ input[type="password"], textarea {
     align-items: flex-end;
 }
 
-.row.row-y-center {
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-}
-
-.row.row-stretch {
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-}
-
-.row.row-baseline {
-    -ms-flex-align: baseline;
-    -webkit-box-align: baseline;
-    align-items: baseline;
-}
-
 .row.row-x-left {
     -ms-flex-pack: start;
     -webkit-box-pack: start;
@@ -785,12 +607,6 @@ input[type="password"], textarea {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
-}
-
-.row.row-x-center {
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
 }
 
 /* flex item utility alignment classes
@@ -819,53 +635,7 @@ input[type="password"], textarea {
     align-self: center;
 }
 
-.align-x-center {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.align-x-left {
-    margin-right: auto;
-}
-
-.align-x-right {
-    margin-left: auto;
-}
-
-.align-y-center {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-}
-
-.align-y-top {
-    -webkit-align-self: flex-start;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-}
-
-.align-y-bottom {
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-}
-
-/* large screen column widths 
- */
-.large-1 {
-    -ms-flex: 0 0 8.33333%;
-    -webkit-box-flex: 0;
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%;
-}
-
-.large-2 {
-    -ms-flex: 0 0 16.66667%;
-    -webkit-box-flex: 0;
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%;
-}
+/* large screen column widths */
 
 .large-3 {
     -ms-flex: 0 0 25%;
@@ -881,27 +651,6 @@ input[type="password"], textarea {
     max-width: 33.33333%;
 }
 
-.large-5 {
-    -ms-flex: 0 0 41.66667%;
-    -webkit-box-flex: 0;
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%;
-}
-
-.large-6 {
-    -ms-flex: 0 0 50%;
-    -webkit-box-flex: 0;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.large-7 {
-    -ms-flex: 0 0 58.33333%;
-    -webkit-box-flex: 0;
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%;
-}
-
 .large-8 {
     -ms-flex: 0 0 66.66667%;
     -webkit-box-flex: 0;
@@ -914,20 +663,6 @@ input[type="password"], textarea {
     -webkit-box-flex: 0;
     flex: 0 0 75%;
     max-width: 75%;
-}
-
-.large-10 {
-    -ms-flex: 0 0 83.33333%;
-    -webkit-box-flex: 0;
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-}
-
-.large-11 {
-    -ms-flex: 0 0 91.66667%;
-    -webkit-box-flex: 0;
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%;
 }
 
 .large-12 {
@@ -948,36 +683,7 @@ input[type="password"], textarea {
     .column {
         padding: 0 var(--gutter-md);
     }
-    .medium-1 {
-        -ms-flex: 0 0 8.33333%;
-        -webkit-box-flex: 0;
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
-    }
-    .medium-2 {
-        -ms-flex: 0 0 16.66667%;
-        -webkit-box-flex: 0;
-        flex: 0 0 16.66667%;
-        max-width: 16.66667%;
-    }
-    .medium-3 {
-        -ms-flex: 0 0 25%;
-        -webkit-box-flex: 0;
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-    .medium-4 {
-        -ms-flex: 0 0 33.33333%;
-        -webkit-box-flex: 0;
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
-    .medium-5 {
-        -ms-flex: 0 0 41.66667%;
-        -webkit-box-flex: 0;
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
-    }
+    
     .medium-6 {
         -ms-flex: 0 0 50%;
         -webkit-box-flex: 0;

@@ -325,6 +325,17 @@
         });
     });    
 
+/* diplay the selected image in a new window
+    * ------------------------------------------------------ */
+    document.addEventListener("DOMContentLoaded", function() {
+        const additionalImages = document.querySelectorAll('.additionalImages img');
+            additionalImages.forEach(function(image) {
+            image.addEventListener('click', function() {
+                window.open(image.src, '_blank');
+            });
+        });
+    });
+
    /* initialize
     * ------------------------------------------------------ */
     (function ssInit() {
