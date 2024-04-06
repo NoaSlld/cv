@@ -1,5 +1,5 @@
 /* ===================================================================
- * Ceevee 2.0.0 - Main JS
+ * Portfolio
  *
  * ------------------------------------------------------------------- */
 
@@ -30,12 +30,7 @@
 
         });
 
-        // force page scroll position to top at page refresh
-        // window.addEventListener('beforeunload' , function () {
-        //     window.scrollTo(0, 0);
-        // });
-
-    }; // end ssPreloader
+    };
 
 
    /* Parallax
@@ -44,7 +39,7 @@
 
         const rellax = new Rellax('.rellax');
 
-    }; // end ssParallax
+    };
 
 
    /* Move header menu
@@ -86,7 +81,7 @@
 
         });
 
-    }; // end ssMoveHeader
+    };
 
 
    /* Mobile Menu
@@ -125,7 +120,7 @@
             }
         });
 
-    }; // end ssMobileMenu
+    };
 
 
    /* Highlight active menu link on pagescroll
@@ -133,28 +128,15 @@
     const ssScrollSpy = function() {
 
         const sections = document.querySelectorAll(".target-section");
-
-        // Add an event listener listening for scroll
         window.addEventListener("scroll", navHighlight);
 
         function navHighlight() {
-        
-            // Get current scroll position
             let scrollY = window.pageYOffset;
-        
-            // Loop through sections to get height(including padding and border), 
-            // top and ID values for each
             sections.forEach(function(current) {
                 const sectionHeight = current.offsetHeight;
                 const sectionTop = current.offsetTop - 50;
                 const sectionId = current.getAttribute("id");
-            
-               /* If our current scroll position enters the space where current section 
-                * on screen is, add .current class to parent element(li) of the thecorresponding 
-                * navigation link, else remove it. To know which link is active, we use 
-                * sectionId variable we are getting while looping through sections as 
-                * an selector
-                */
+   
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
                 } else {
@@ -163,7 +145,7 @@
             });
         }
 
-    }; // end ssScrollSpy
+    };
 
 
    /* Swiper
@@ -178,12 +160,10 @@
                 clickable: true,
             },          
             breakpoints: {
-                // when window width is >= 401px
                 401: {
                     slidesPerView: 1,
                     spaceBetween: 20
                 },
-                // when window width is >= 801px
                 801: {
                     slidesPerView: 2,
                     spaceBetween: 48
@@ -191,7 +171,7 @@
             }
          });
 
-    }; // end ssSwiper
+    };
 
 
    /* Lightbox
@@ -227,7 +207,7 @@
             });
         });
 
-    };  // end ssLightbox
+    };
 
 
    /* Alert boxes
@@ -251,7 +231,7 @@
 
         })
 
-    }; // end ssAlertBoxes
+    };
 
 
    /* Smoothscroll
@@ -270,30 +250,7 @@
             });
         });
 
-    }; // end ssSmoothScroll
-
-
-   /* back to top
-    * ------------------------------------------------------ */
-    const ssBackToTop = function() {
-
-        const pxShow = 900;
-        const goTopButton = document.querySelector(".ss-go-top");
-
-        if (!goTopButton) return;
-
-        // Show or hide the button
-        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible");
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY >= pxShow) {
-                if(!goTopButton.classList.contains('link-is-visible')) goTopButton.classList.add("link-is-visible")
-            } else {
-                goTopButton.classList.remove("link-is-visible")
-            }
-        });
-
-    }; // end ssBackToTop
+    };
 
     /* diplay experience's details
     * ------------------------------------------------------ */
