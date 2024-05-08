@@ -2092,7 +2092,7 @@ input[type="button"].btn--primary:focus {
     display: none;
 }
 
-#toggleButton1, #toggleButton2 {
+#toggleButton1, #toggleButton2, #replaceIconsButton{
     --btn-height: inherit;
     letter-spacing:inherit;
 }
@@ -2144,6 +2144,21 @@ input[type="button"].btn--primary:focus {
 
 .language-block{
     margin-left: 10px;
+}
+
+.icons {
+    color:var(--color-text);
+}
+
+.knowledgeText a{
+    color:var(--color-text);
+    margin-left: 30px;
+    display: block;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
 }
 
 

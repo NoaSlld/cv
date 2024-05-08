@@ -282,7 +282,7 @@
         });
     });    
 
-/* diplay the selected image in a new window
+    /* diplay the selected image in a new window
     * ------------------------------------------------------ */
     document.addEventListener("DOMContentLoaded", function() {
         const additionalImages = document.querySelectorAll('.additionalImages img');
@@ -292,6 +292,20 @@
             });
         });
     });
+
+    /* replace icons by text
+    * ------------------------------------------------------ */
+    document.getElementById('replaceIconsButton').onclick = function() {
+        var detailsLinks = document.querySelectorAll('.icons');
+        detailsLinks.forEach(function(link) {
+            if (link.textContent === link.dataset.alttext) {
+                link.innerHTML = `<img src="${link.dataset.iconsrc}" alt="${link.dataset.alttext}" width="40" height="40"/>`;
+            } else {
+                link.textContent = link.dataset.alttext;
+            }
+        });
+    };
+    
 
    /* initialize
     * ------------------------------------------------------ */
@@ -306,7 +320,6 @@
         ssLightbox();
         ssAlertBoxes();
         ssSmoothScroll();
-        ssBackToTop();
 
     })();
 
