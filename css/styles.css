@@ -1656,6 +1656,10 @@ input[type="button"].btn--primary:focus {
 .s-hero__content h2 span, .s-hero__content h2 a {
     color: white;
 }
+.s-hero__content h2 strong {
+    color: white;
+    font-weight: normal;
+}
 
 .s-hero__content h3 {
     font-family: var(--font-2);
@@ -1911,6 +1915,11 @@ input[type="button"].btn--primary:focus {
 .s-about h3 {
     margin-top: 0;
     color: white;
+}
+
+.s-about__content strong{
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .s-about__pic {
