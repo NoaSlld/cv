@@ -25,9 +25,10 @@
     <meta name="twitter:description" content="Explorez mes projets et compétences en développement informatique." />
     <meta name="twitter:image" content="https://noaslld.github.io/images/icon-ns.jpg" />
 
-    <!-- CSS ================================================== -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/vendor.css">
+    <!-- Preload CSS files -->
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/vendor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
 
     <link rel="canonical" href="https://noaslld.github.io/cv/" /> <!--SEO-->
 
@@ -164,6 +165,10 @@
                             <span class="resume-block__header-meta">2* 2eme année - IUT Clermont-Ferrand</span>
                             <br>
                             <span class = "details">développement, base de données, architecture, réseau</span>
+                            <br>
+                            <span class="resume-block__header-meta">3eme année - IUT Clermont-Ferrand</span>
+                            <br>
+                            <span class = "details">Alternance en développement WEB</span>
                         </p>
 
                     </div> <!-- end BUT -->
@@ -367,7 +372,6 @@
         </section>
         
         <!-- connaissances ================================================ -->
-
         <section id="connaissances" class="s-resume target-section">
             <div class="row s-resume__section">
                 <div class="column large-3 tab-12">
@@ -456,7 +460,7 @@
                                 <a href="https://refactoring.guru/design-patterns" target="_blank" title="Design Patterns">• Design patterns</a>
                                 <a href="https://www.uml-diagrams.org/uml-25-diagrams.html" target="_blank" title="Modèle entité – association, UML">• Modèle entité – association, UML</a>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank" title="Verbes HTTP et codes de retour">• Verbes http et codes de retour</a>
-                                <a>• Administration de réseaux locaux (Ethernet / Wifi + Nat, routage, services usuels...)</a>
+                                <a href="#" onclick="return false;">• Administration de réseaux locaux (Ethernet / Wifi + Nat, routage, services usuels...)</a>
                                 <a href="https://google.github.io/styleguide/" target="_blank" title="Conventions de Nommage">• Conventions de nommage</a>
                             </p>
                         </div>
@@ -664,6 +668,7 @@
     <!-- Javacript ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/seo.js"></script>
 </body>
 
 </html>

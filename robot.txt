@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Sitemap: https://noaslld.github.io/cv/sitemap.xml
+
+# Bloquer l’accès aux fichiers ou sections inutiles pour l'indexation
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+
+# Éviter l’indexation des fichiers de test ou inutiles
+Disallow: /test/
+Disallow: /draft/
+
+# Empêcher les moteurs de rechercher des URLs avec des paramètres
+Disallow: /*?
+
+# Ajout de délai entre les requêtes pour les bots mal configurés (facultatif)
+Crawl-delay: 5
+
+# Autoriser les crawlers spécifiques (facultatif)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
